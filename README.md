@@ -3,7 +3,7 @@
 **Demo:** https://gossignment.guliev.info
 
 ## Setup
-Just execute 
+Configure variables in `.env` file and execute 
 ```shell
 docker compose up -d
 ```
