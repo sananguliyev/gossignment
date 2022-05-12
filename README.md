@@ -12,14 +12,14 @@ docker compose up -d
 The mock files are not added in order to keep the repository clean. You can use the commands for generating mock files:
 
 ```shell
-go get github.com/vektra/mockery/.../
 cd /path/to/project
-mockery -dir domain/interactor -name MemInteractor
-mockery -dir domain/interactor -name RecordInteractor
-mockery -dir domain/repository -name MemRepository
-mockery -dir domain/repository -name RecordRepository
-mockery -dir domain/validator -name MemValidator
-mockery -dir domain/validator -name RecordValidator
+go install github.com/vektra/mockery/v2@latest
+mockery --dir=domain/interactor --name=MemInteractor
+mockery --dir=domain/interactor --name=RecordInteractor
+mockery --dir=domain/repository --name=MemRepository
+mockery --dir=domain/repository --name=RecordRepository
+mockery --dir=domain/validator --name=MemValidator
+mockery --dir=domain/validator --name=RecordValidator
 ```
 
 ## Endpoints

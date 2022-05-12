@@ -26,12 +26,12 @@ jobs:
       - name: Generate mocks
         run: |
           go install github.com/vektra/mockery/v2@latest
-          mockery -dir domain/interactor -name MemInteractor
-          mockery -dir domain/interactor -name RecordInteractor
-          mockery -dir domain/repository -name MemRepository
-          mockery -dir domain/repository -name RecordRepository
-          mockery -dir domain/validator -name MemValidator
-          mockery -dir domain/validator -name RecordValidator
+          mockery --dir=domain/interactor --name=MemInteractor
+          mockery --dir=domain/interactor --name=RecordInteractor
+          mockery --dir=domain/repository --name=MemRepository
+          mockery --dir=domain/repository --name=RecordRepository
+          mockery --dir=domain/validator --name=MemValidator
+          mockery --dir=domain/validator --name=RecordValidator
 
       - name: Test
         run: go test -v ./...
