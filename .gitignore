@@ -1,0 +1,7 @@
+/.idea
+/vendor
+/cert
+/build
+/cmd/*/wire_gen.go
+/mocks
+.DS_Store

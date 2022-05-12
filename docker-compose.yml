@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    container_name: gossignment-app
+    image: golang:1.18-alpine
+    working_dir: /app
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: "go run ./cmd/http/."
