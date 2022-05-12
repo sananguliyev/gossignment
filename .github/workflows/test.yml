@@ -18,6 +18,21 @@ jobs:
         with:
           go-version: 1.18
 
+      - name: Install and build DI
+        run: |
+          go install github.com/google/wire/cmd/wire@latest
+          wire ./cmd/...
+
+      - name: Generate mocks
+        run: |
+          go get github.com/vektra/mockery/.../
+          mockery -dir domain/interactor -name MemInteractor
+          mockery -dir domain/interactor -name RecordInteractor
+          mockery -dir domain/repository -name MemRepository
+          mockery -dir domain/repository -name RecordRepository
+          mockery -dir domain/validator -name MemValidator
+          mockery -dir domain/validator -name RecordValidator
+
       - name: Test
         run: go test -v ./...
 
