@@ -50,5 +50,5 @@ Content-Type: application/json
 
 #### Read in-memory record
 ```http request
-GET http://gossignment.host/in-memory?key=salam1
+GET http://gossignment.host/in-memory?key=new-getirian
 ```
