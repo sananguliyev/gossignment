@@ -2,7 +2,6 @@ package mongodb
 
 import (
 	"context"
-	"fmt"
 	"github.com/SananGuliyev/gossignment/domain/entity"
 	"github.com/SananGuliyev/gossignment/domain/io"
 	"github.com/SananGuliyev/gossignment/domain/repository"
@@ -112,8 +111,6 @@ func (r *recordRepository) FilterByTimeAndAmount(startDate, endDate io.Date, min
 	if err = filterCursor.All(context.TODO(), &records); err != nil {
 		return nil, err
 	}
-
-	fmt.Println(len(records))
 
 	return records, nil
 }
