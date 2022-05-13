@@ -28,8 +28,6 @@ func NewNetHttpServer(
 func (s *NetHttpServer) Run() {
 	wait := time.Second * 15
 
-	http.HandleFunc("/persistent/filter", s.recordHandler.Filter)
-
 	srv := &http.Server{
 		Addr:    "0.0.0.0:80",
 		Handler: s,
