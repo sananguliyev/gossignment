@@ -3,6 +3,12 @@
 **Demo:** https://gossignment.guliev.info
 
 ## Setup
+Install `wire` & generate DI
+```shell
+go install github.com/google/wire/cmd/wire@latest
+wire ./cmd/...
+```
+
 Configure variables in `.env` file and execute 
 ```shell
 docker compose up -d
